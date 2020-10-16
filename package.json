@@ -1,0 +1,28 @@
+{
+  "name": "4chan",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "set NODE_ENV=production && node server.js",
+    "start:scrapping": "node scraper.js && node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:prod": "set NODE_ENV=production && node server.js",
+    "start:dev:front": "cd frontend && npm start",
+    "start:dev:server": "export NODE_ENV=development && node server.js",
+    "build:prod": "cd frontend && npm run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-graphql": "^0.11.0",
+    "graphql": "^15.3.0",
+    "mongoose": "^5.10.7",
+    "nightmare": "^3.0.1"
+  }
+}
