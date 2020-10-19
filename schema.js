@@ -152,7 +152,7 @@ const ChanchildType = new GraphQLObjectType({
 const RootchildQuery = new GraphQLObjectType({
   name: "RootchildQueryType",
   fields: {
-    chan: {
+    chanchild: {
       type: ChanchildType,
       args: {
         id: {
@@ -163,8 +163,8 @@ const RootchildQuery = new GraphQLObjectType({
         return Chanchild.findById(args.id);
       },
     },
-    chanchilds: {
-      type: new GraphQLList(ChanType),
+    chanchildren: {
+      type: new GraphQLList(ChanchildType),
       resolve(parent, args) {
         return Chanchild.find({});
       },
@@ -217,8 +217,8 @@ const Mutationchild = new GraphQLObjectType({
 });
 
 module.exports = new GraphQLSchema({
-  query: RootQuery,
-  mutation: Mutation,
-  childquery: RootchildQuery,
-  mutationchild: Mutationchild,
+  // query: RootQuery,
+  // mutation: Mutation,
+  query: RootchildQuery,
+  mutation: Mutationchild,
 });

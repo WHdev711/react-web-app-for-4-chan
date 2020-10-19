@@ -52,7 +52,7 @@ const chansFromJson = JSON.parse(
 
 var tmpchans = new Array();
 var tmpchanchilds = new Array();
-chanlen = Object.keys(chansFromJson).length
+const chanlen = Object.keys(chansFromJson).length
 
 for (let i = 0; i < chanlen; i++) {
 
@@ -66,7 +66,7 @@ for (let i = 0; i < chanlen; i++) {
     op: chansFromJson[i].op,
     unique_ips: chansFromJson[i].thread[0].unique_ips
   } 
-  var threadlen = Object.keys(chansFromJson[i].thread).length
+  const threadlen = Object.keys(chansFromJson[i].thread).length
   // "no", "now", "name", "com", "time", "resto", "trip"
   if (threadlen>1) {
     for (let j = 1; j < threadlen; j++)
